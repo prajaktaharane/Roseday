@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Rose Day Ahoo ❤️</title>
 
 <style>
@@ -19,7 +20,7 @@ body {
   position: relative;
 }
 
-/* Center card */
+/* Center container */
 .container {
   min-height: 100vh;
   display: flex;
@@ -40,7 +41,7 @@ body {
   text-align: center;
 }
 
-/* Text */
+/* Text styles */
 h1 {
   font-size: 32px;
   margin: 10px 0;
@@ -105,12 +106,56 @@ button {
     transform: translateY(120vh);
   }
 }
+
+/* Mobile tuning */
+@media (max-width: 600px) {
+  .container {
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .card {
+    border-radius: 20px;
+    padding: 20px 15px 30px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .typing {
+    font-size: 16px;
+  }
+
+  .rose {
+    font-size: 36px;
+  }
+
+  img {
+    width: 180px;
+  }
+
+  .shayari {
+    font-size: 15px;
+    margin: 12px 5px;
+  }
+
+  .name {
+    font-size: 17px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<!-- Music -->
+<!-- Background Music -->
 <audio id="music" loop>
   <source src="Song.mp3" type="audio/mpeg">
 </audio>
@@ -163,7 +208,7 @@ function typingEffect() {
 typingEffect();
 
 /* Falling roses */
-for (let i = 0; i < 18; i++) {
+for (let i = 0; i < 12; i++) {
   let rose = document.createElement("div");
   rose.innerHTML = "🌹";
   rose.className = "falling";
