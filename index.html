@@ -1,159 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Rose Day Ahoo ❤️</title>
+<meta charset="UTF-8">
+<title>Happy Rose Day Ahoo ❤️</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 30px;
-      background: linear-gradient(to right, #ff6a88, #ff99ac);
-      text-align: center;
-      font-family: 'Georgia', serif;
-      color: white;
-      overflow-x: hidden;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    h1 {
-      font-size: 42px;
-      margin-top: 10px;
-      position: relative;
-      z-index: 10;
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ff6a88, #ff99ac);
+  font-family: 'Georgia', serif;
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
 
-    .typing {
-      font-size: 26px;
-      margin-top: 20px;
-      min-height: 40px;
-      position: relative;
-      z-index: 10;
-    }
+/* Center card */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
 
-    .rose {
-      font-size: 70px;
-      margin: 20px;
-      position: relative;
-      z-index: 10;
-    }
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 25px;
+  padding: 25px 20px 35px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
 
-    img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 20px;
-      margin-top: 20px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.6);
-      position: relative;
-      z-index: 10;
-    }
+/* Text */
+h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
 
-    .shayari {
-      font-size: 24px;
-      font-style: italic;
-      margin: 30px;
-      line-height: 1.6;
-      position: relative;
-      z-index: 10;
-    }
+.typing {
+  font-size: 20px;
+  min-height: 30px;
+  margin-top: 10px;
+}
 
-    .name {
-      margin-top: 40px;
-      font-size: 26px;
-      font-weight: bold;
-      position: relative;
-      z-index: 10;
-    }
+.rose {
+  font-size: 48px;
+  margin: 15px 0;
+}
 
-    button {
-      padding: 10px 22px;
-      border: none;
-      border-radius: 20px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-      background: white;
-      color: #ff3b6f;
-      position: relative;
-      z-index: 10;
-    }
+img {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 18px;
+  margin: 15px 0;
+  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
 
-    /* Falling Roses */
-    .falling {
-      position: absolute;
-      top: -50px;
-      animation: fall linear infinite;
-      font-size: 30px;
-      z-index: 1;
-    }
+.shayari {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 15px;
+}
 
-    @keyframes fall {
-      to {
-        transform: translateY(110vh);
-      }
-    }
-  </style>
+.name {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Button */
+button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background: white;
+  color: #ff3b6f;
+  margin-bottom: 10px;
+}
+
+/* Falling roses */
+.falling {
+  position: fixed;
+  top: -40px;
+  font-size: 26px;
+  animation: fall linear infinite;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(120vh);
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- Background Music -->
-<audio id="music" loop autoplay muted>
+<!-- Music -->
+<audio id="music" loop>
   <source src="Song.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="playMusic()">Tap here to feel the magic</button>
+<div class="container">
+  <div class="card">
 
-<h1>Happy Rose Day Ahoo ❤️</h1>
+    <button onclick="playMusic()">Tap here to feel the magic</button>
 
-<div class="typing" id="typing"></div>
+    <h1>Happy Rose Day Ahoo ❤️</h1>
 
-<div class="rose">🌹🌹🌹</div>
+    <div class="typing" id="typing"></div>
 
-<!-- Photo -->
-<img src="Mahipraj.jpeg" alt="Couple Photo">
+    <div class="rose">🌹🌹🌹</div>
 
-<div class="shayari">
-  "Gulab ke rang jaise ho tum,<br>
-  Dil ke har ehsaas jaise ho tum,<br>
-  Har din tumse hi shuru hota hai,<br>
-  Aur tum par hi khatam ❤️"
-</div>
+    <img src="Mahipraj.jpeg" alt="Rose Photo">
 
-<div class="name">
-  Forever Yours 💕<br>
-  — Prajakta
+    <div class="shayari">
+      "Gulab ke rang jaise ho tum,<br>
+      Dil ke har ehsaas jaise ho tum,<br>
+      Har din tumse hi shuru hota hai,<br>
+      Aur tum par hi khatam ❤️"
+    </div>
+
+    <div class="name">
+      Forever Yours 💕<br>
+      — Prajakta
+    </div>
+
+  </div>
 </div>
 
 <script>
-  /* Music play on button */
-  function playMusic() {
-    const music = document.getElementById("music");
-    music.muted = false;
-    music.play();
-  }
+function playMusic() {
+  const music = document.getElementById("music");
+  music.play();
+}
 
-  /* Typing Effect */
-  const text = "Tum meri zindagi ka sabse khoobsurat ehsaas ho 💖";
-  let i = 0;
+/* Typing effect */
+const text = "Tum meri zindagi ka sabse khoobsurat ehsaas ho 💖";
+let i = 0;
 
-  function typingEffect() {
-    if (i < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typingEffect, 100);
-    }
+function typingEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typingEffect, 80);
   }
-  typingEffect();
+}
+typingEffect();
 
-  /* Falling Roses */
-  for (let i = 0; i < 25; i++) {
-    let rose = document.createElement("div");
-    rose.innerHTML = "🌹";
-    rose.className = "falling";
-    rose.style.left = Math.random() * 100 + "vw";
-    rose.style.animationDuration = (Math.random() * 3 + 3) + "s";
-    document.body.appendChild(rose);
-  }
+/* Falling roses */
+for (let i = 0; i < 18; i++) {
+  let rose = document.createElement("div");
+  rose.innerHTML = "🌹";
+  rose.className = "falling";
+  rose.style.left = Math.random() * 100 + "vw";
+  rose.style.animationDuration = (Math.random() * 4 + 4) + "s";
+  document.body.appendChild(rose);
+}
 </script>
 
 </body>
