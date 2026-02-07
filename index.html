@@ -6,159 +6,111 @@
 <title>Happy Rose Day Ahoo ❤️</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #ff6a88, #ff99ac);
-  font-family: 'Georgia', serif;
-  color: white;
-  overflow-x: hidden;
-  position: relative;
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:'Georgia', serif;
+  background:linear-gradient(to bottom,#ff6f91,#ff9eb5);
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:30px 15px;
+  overflow-x:hidden;
+  color:white;
 }
 
-/* Center container */
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  padding-top: 60px;
-  position: relative;
-  z-index: 10;
-}
-
-.card {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(6px);
-  border-radius: 25px;
-  padding: 25px 20px 35px;
-  max-width: 420px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Text styles */
-h1 {
-  font-size: 32px;
-  margin: 10px 0;
-}
-
-.typing {
-  font-size: 20px;
-  min-height: 30px;
-  margin-top: 10px;
-}
-
-.rose {
-  font-size: 48px;
-  margin: 15px 0;
-}
-
-img {
-  width: 220px;
-  max-width: 100%;
-  border-radius: 18px;
-  margin: 15px 0;
-  box-shadow: 0 0 12px rgba(255,255,255,0.6);
-}
-
-.shayari {
-  font-size: 18px;
-  font-style: italic;
-  line-height: 1.6;
-  margin-top: 15px;
-}
-
-.name {
-  margin-top: 25px;
-  font-size: 20px;
-  font-weight: bold;
+/* Card */
+.card{
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(8px);
+  border-radius:30px;
+  width:100%;
+  max-width:420px;
+  padding:30px 22px 35px;
+  text-align:center;
+  position:relative;
+  z-index:10;
 }
 
 /* Button */
-button {
-  padding: 10px 22px;
-  border: none;
-  border-radius: 20px;
-  font-size: 14px;
-  cursor: pointer;
-  background: white;
-  color: #ff3b6f;
-  margin-bottom: 10px;
+button{
+  background:white;
+  color:#ff4f7a;
+  border:none;
+  padding:8px 20px;
+  border-radius:25px;
+  font-size:13px;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+
+/* Heading */
+h1{
+  font-size:28px;
+  margin:10px 0;
+  font-weight:600;
+}
+
+.heart{
+  font-size:28px;
+  margin:5px 0 10px;
+}
+
+/* Typing */
+.typing{
+  font-size:18px;
+  line-height:1.4;
+  min-height:44px;
+  margin-bottom:15px;
+}
+
+/* Roses */
+.roses{
+  font-size:32px;
+  margin:12px 0 18px;
+}
+
+/* Image */
+img{
+  width:100%;
+  max-width:260px;
+  border-radius:22px;
+  box-shadow:0 0 15px rgba(255,255,255,0.5);
+  margin:15px 0 22px;
+}
+
+/* Shayari */
+.shayari{
+  font-size:16px;
+  font-style:italic;
+  line-height:1.7;
+  opacity:0.95;
+}
+
+/* Name */
+.name{
+  margin-top:28px;
+  font-size:18px;
+  font-weight:bold;
 }
 
 /* Falling roses */
-.falling {
-  position: fixed;
-  top: -40px;
-  font-size: 26px;
-  animation: fall linear infinite;
-  z-index: 1;
-  opacity: 0.7;
+.falling{
+  position:fixed;
+  top:-30px;
+  font-size:24px;
+  animation:fall linear infinite;
+  opacity:0.7;
+  z-index:1;
 }
 
-@keyframes fall {
-  to {
-    transform: translateY(120vh);
-  }
-}
-
-/* Mobile tuning */
-@media (max-width: 600px) {
-  .container {
-    align-items: flex-start;
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
-
-  body {
-    min-height: auto;
-  }
-
-  .container {
-    min-height: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  .card {
-    border-radius: 20px;
-    padding: 20px 15px 30px;
-  }
-
-  h1 {
-    font-size: 26px;
-  }
-
-  .typing {
-    font-size: 16px;
-  }
-
-  .rose {
-    font-size: 36px;
-  }
-
-  img {
-    width: 180px;
-  }
-
-  .shayari {
-    font-size: 15px;
-    margin: 12px 5px;
-  }
-
-  .name {
-    font-size: 17px;
-  }
-
-  button {
-    font-size: 13px;
-    padding: 9px 16px;
+@keyframes fall{
+  to{
+    transform:translateY(120vh);
   }
 }
 </style>
@@ -166,65 +118,61 @@ button {
 
 <body>
 
-<!-- Background Music -->
 <audio id="music" loop>
   <source src="Song.mp3" type="audio/mpeg">
 </audio>
 
-<div class="container">
-  <div class="card">
+<div class="card">
 
-    <button onclick="playMusic()">Tap here to feel the magic</button>
+  <button onclick="playMusic()">Tap here to feel the magic</button>
 
-    <h1>Happy Rose Day Ahoo ❤️</h1>
+  <h1>Happy Rose Day Ahoo</h1>
+  <div class="heart">❤️</div>
 
-    <div class="typing" id="typing"></div>
+  <div class="typing" id="typing"></div>
 
-    <div class="rose">🌹🌹🌹</div>
+  <div class="roses">🌹 🌹 🌹</div>
 
-    <img src="Mahipraj.jpeg" alt="Rose Photo">
+  <img src="Mahipraj.jpeg" alt="Rose Image">
 
-    <div class="shayari">
-      "Gulab ke rang jaise ho tum,<br>
-      Dil ke har ehsaas jaise ho tum,<br>
-      Har din tumse hi shuru hota hai,<br>
-      Aur tum par hi khatam ❤️"
-    </div>
-
-    <div class="name">
-      Forever Yours 💕<br>
-      — Prajakta
-    </div>
-
+  <div class="shayari">
+    "Gulab ke rang jaise ho tum,<br>
+    Dil ke har ehsaas jaise ho tum,<br>
+    Har din tumse hi shuru hota hai,<br>
+    Aur tum par hi khatam ❤️"
   </div>
+
+  <div class="name">
+    Forever Yours 💕<br>
+    — Prajakta
+  </div>
+
 </div>
 
 <script>
-function playMusic() {
-  const music = document.getElementById("music");
-  music.play();
+function playMusic(){
+  document.getElementById("music").play();
 }
 
 /* Typing effect */
-const text = "Tum meri zindagi ka sabse khoobsurat ehsaas ho 💖";
-let i = 0;
-
-function typingEffect() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
+const text="Tum meri zindagi ka sabse khoobsurat ehsaas ho ✨";
+let i=0;
+function typingEffect(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
     i++;
-    setTimeout(typingEffect, 80);
+    setTimeout(typingEffect,80);
   }
 }
 typingEffect();
 
 /* Falling roses */
-for (let i = 0; i < 12; i++) {
-  let rose = document.createElement("div");
-  rose.innerHTML = "🌹";
-  rose.className = "falling";
-  rose.style.left = Math.random() * 100 + "vw";
-  rose.style.animationDuration = (Math.random() * 4 + 4) + "s";
+for(let i=0;i<20;i++){
+  let rose=document.createElement("div");
+  rose.className="falling";
+  rose.innerHTML="🌹";
+  rose.style.left=Math.random()*100+"vw";
+  rose.style.animationDuration=(Math.random()*4+4)+"s";
   document.body.appendChild(rose);
 }
 </script>
