@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Rose Day Ahoo ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      background: linear-gradient(to right, #ff6a88, #ff99ac);
+      text-align: center;
+      font-family: 'Georgia', serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-top: 10px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .typing {
+      font-size: 26px;
+      margin-top: 20px;
+      min-height: 40px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .rose {
+      font-size: 70px;
+      margin: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.6);
+      position: relative;
+      z-index: 10;
+    }
+
+    .shayari {
+      font-size: 24px;
+      font-style: italic;
+      margin: 30px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 10;
+    }
+
+    .name {
+      margin-top: 40px;
+      font-size: 26px;
+      font-weight: bold;
+      position: relative;
+      z-index: 10;
+    }
+
+    button {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      background: white;
+      color: #ff3b6f;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Falling Roses */
+    .falling {
+      position: absolute;
+      top: -50px;
+      animation: fall linear infinite;
+      font-size: 30px;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="music" loop autoplay muted>
+  <source src="Song.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()">Tap here to feel the magic</button>
+
+<h1>Happy Rose Day Ahoo ❤️</h1>
+
+<div class="typing" id="typing"></div>
+
+<div class="rose">🌹🌹🌹</div>
+
+<!-- Photo -->
+<img src="Mahipraj.jpeg" alt="Couple Photo">
+
+<div class="shayari">
+  "Gulab ke rang jaise ho tum,<br>
+  Dil ke har ehsaas jaise ho tum,<br>
+  Har din tumse hi shuru hota hai,<br>
+  Aur tum par hi khatam ❤️"
+</div>
+
+<div class="name">
+  Forever Yours 💕<br>
+  — Prajakta
+</div>
+
+<script>
+  /* Music play on button */
+  function playMusic() {
+    const music = document.getElementById("music");
+    music.muted = false;
+    music.play();
+  }
+
+  /* Typing Effect */
+  const text = "Tum meri zindagi ka sabse khoobsurat ehsaas ho 💖";
+  let i = 0;
+
+  function typingEffect() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typingEffect, 100);
+    }
+  }
+  typingEffect();
+
+  /* Falling Roses */
+  for (let i = 0; i < 25; i++) {
+    let rose = document.createElement("div");
+    rose.innerHTML = "🌹";
+    rose.className = "falling";
+    rose.style.left = Math.random() * 100 + "vw";
+    rose.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(rose);
+  }
+</script>
+
+</body>
+</html>
