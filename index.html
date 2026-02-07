@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  min-height: 200vh;
+  min-height: 100vh;
   background: linear-gradient(to bottom, #ff6a88, #ff99ac);
   font-family: 'Georgia', serif;
   color: white;
@@ -22,11 +22,12 @@ body {
 
 /* Center container */
 .container {
-  min-height: 200vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px;
+  padding-top: 60px;
   position: relative;
   z-index: 10;
 }
@@ -108,10 +109,20 @@ button {
 }
 
 /* Mobile tuning */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .container {
     align-items: flex-start;
     padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  body {
+    min-height: auto;
+  }
+
+  .container {
+    min-height: auto;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
 
